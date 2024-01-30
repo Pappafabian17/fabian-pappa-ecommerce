@@ -1,0 +1,10 @@
+.CartWidgetContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: solid 1px #000;
+  border-radius: 8px;
+  background-color: #dad7d7;
+  height: 30px;
+  padding: 2px;
+}

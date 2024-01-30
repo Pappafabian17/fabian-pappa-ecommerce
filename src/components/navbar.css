@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(8, 82, 8);
+  padding: 10px;
+}
+.brandContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+.logoMate {
+  width: 40px;
+  height: 40px;
+}
+.link {
+  color: #fff;
+  text-decoration: none;
+}
+.link:hover {
+  color: rgb(88, 31, 31);
+}
+.navSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
