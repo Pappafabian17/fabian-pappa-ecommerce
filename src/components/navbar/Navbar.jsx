@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
-import CartWidget from "./CartWidget";
+import CartWidget from "../cartWidget/CartWidget";
 
 export default function Navbar() {
   return (
