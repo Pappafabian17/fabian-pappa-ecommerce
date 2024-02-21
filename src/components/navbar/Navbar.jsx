@@ -13,13 +13,13 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="navSection">
-        <Link className="link" to="/">
+        <Link className="link" to="/category/mates">
           Mates
         </Link>
-        <Link className="link" to="/">
+        <Link className="link" to="/category/termos">
           Termos
         </Link>
-        <Link className="link" to="/">
+        <Link className="link" to="/category/bombillas">
           Bombillas
         </Link>
         <CartWidget cantidad={8} />

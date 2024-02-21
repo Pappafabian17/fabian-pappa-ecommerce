@@ -51,10 +51,18 @@ const products = [
   },
 ];
 
-export default async function getProducts() {
+export async function getProducts() {
   return await new Promise((response) => {
     setTimeout(() => {
       response(products);
     }, 600);
   });
 }
+
+export const getProductById = (productId) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(products.find((prod) => prod.id === productId));
+    }, 500);
+  });
+};
