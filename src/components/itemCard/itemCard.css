@@ -32,3 +32,9 @@
   text-decoration: none;
   font-weight: 700;
 }
+
+@media only screen and (max-width: 768px){
+.detalleButton {
+  width: 38vw;
+}
+}

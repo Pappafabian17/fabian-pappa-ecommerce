@@ -1,0 +1,14 @@
+.controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.counterButton{border: solid 1px brown;
+    border-radius: 50px;
+    
+    background-color: saddlebrown;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;}
