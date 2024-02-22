@@ -11,11 +11,19 @@ export default function ItemCard({ id, name, img, price, description, stock }) {
         <div>{description}</div>
       </picture>
       <section>
-        <p>Precio:{price}</p>
-        <p>Stock disponible:{stock}</p>
+        <p>Precio:<span className="spanItem">
+          ${price}
+
+          </span></p>
+        <p>Stock disponible:
+          <span className="spanItem">
+          {stock}
+
+          </span>
+          </p>
       </section>
       <footer>
-        <Link to={`/item/${id}`}>Ver detalle</Link>
+        <Link className="detalleButton" to={`/item/${id}`}>Ver detalle</Link>
       </footer>
     </article>
   );
