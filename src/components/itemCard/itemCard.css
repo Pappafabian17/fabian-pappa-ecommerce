@@ -1,11 +1,18 @@
-.itemCard{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 16rem;
+.itemCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 16rem;
+  border-radius: 8px;
+  border: solid green 4px;
+  padding: 19px;
 }
-.imagenProducto{
-    width: 100px;
-    height: 100px;
+.imagenProducto {
+  width: 200px;
+  height: auto;
+}
+.imagenContainer {
+  width: 200px;
+  height: auto;
 }

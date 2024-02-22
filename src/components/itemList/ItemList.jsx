@@ -1,7 +1,6 @@
 import ItemCard from "../itemCard/itemCard";
-
+import "./itemList.css";
 export default function ItemList({ productos }) {
-  console.log("prod de itemlist",productos)
   return (
     <div className="itemList">
       {productos.map((producto) => {

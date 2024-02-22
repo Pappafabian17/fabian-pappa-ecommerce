@@ -38,11 +38,3 @@ export default function ItemCounter({ stock, initial, onAdd }) {
     </div>
   );
 }
-
-/* <ItemCounter
-        initial={1}
-        stock={20}
-        onAdd={(cantidad) =>
-          console.log(`se agregaron ${cantidad} items al carrito`)
-        }
-      /> */
