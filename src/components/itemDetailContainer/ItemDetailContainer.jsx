@@ -23,7 +23,9 @@ function ItemDetailContainer() {
   }, [itemId, product]);
 
   return (
-    <div>{loading ? <p>Cargando ...</p> : <ItemDetail {...product} />}</div>
+    <div className="mainItemDetailContainer">
+      {loading ? <p>Cargando ...</p> : <ItemDetail {...product} />}
+    </div>
   );
 }
 

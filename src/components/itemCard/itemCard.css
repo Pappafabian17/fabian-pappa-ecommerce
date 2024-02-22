@@ -16,19 +16,19 @@
   width: 200px;
   height: auto;
 }
-.spanItem{
-    font-weight: 700;
+.spanItem {
+  font-weight: 700;
 }
-.detalleButton{
-    display: flex;
-    width: 14vw;
-    height: 5vh;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid green;
-    border-radius: 20px;
-    background-color: #92e492;
-    color: #1d391d;
-    text-decoration: none;
-    font-weight: 700;
+.detalleButton {
+  display: flex;
+  width: 10vw;
+  height: 5vh;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid green;
+  border-radius: 20px;
+  background-color: #92e492;
+  color: #1d391d;
+  text-decoration: none;
+  font-weight: 700;
 }

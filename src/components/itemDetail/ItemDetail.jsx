@@ -1,6 +1,6 @@
 import React from "react";
 import ItemCounter from "../counter/ItemCounter";
-import "./itemDetail.css"
+import "./itemDetail.css";
 function ItemDetail({ name, img, category, description, price, stock, onAdd }) {
   return (
     <article className="CardItem">
@@ -11,9 +11,15 @@ function ItemDetail({ name, img, category, description, price, stock, onAdd }) {
         <img className="imagenDetail" src={img} alt={name} />
       </picture>
       <section>
-        <p className="Info">Categoria: {category}</p>
-        <p className="Info">Descripción: {description}</p>
-        <p className="Info">Precio: ${price}</p>
+        <p className="Info">
+          Categoria: <span className="spanDetail">{category}</span>
+        </p>
+        <p className="Info">
+          Descripción: <span className="spanDetail">{description}</span>
+        </p>
+        <p className="Info">
+          Precio: <span className="spanDetail">${price}</span>
+        </p>
       </section>
       <footer className="ItemFooter">
         <ItemCounter
