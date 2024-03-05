@@ -5,6 +5,7 @@ import Layout from "./pages/Layout";
 
 import ItemDetailContainer from "./components/itemDetailContainer/ItemDetailContainer";
 import CartProvider from "./context/CartContext";
+import Cart from "./components/cart/Cart";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             />
 
             <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+            <Route path="/cart" element={<Cart />} />
           </Route>
           <Route path="*" element={<h1>404 NOT FOUND</h1>} />
         </Routes>
