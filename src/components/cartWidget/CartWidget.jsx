@@ -1,9 +1,20 @@
+
 import "./cartWidget.css";
-export default function CartWidget({ cantidad }) {
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
+
+export default function CartWidget() {
+  const {totalArticulos} = useContext(CartContext);
+
   return (
-    <div className="CartWidgetContainer">
+
+    <Link to="/cart" className="CartWidgetContainer"> 
       <img src="/images/carrito.svg" alt="carrito de compras" />
-      <p>{cantidad}</p>
-    </div>
-  );
+      {totalArticulos > 0 ? 
+      <p>{totalArticulos}</p> : 
+      <p>0</p>
+      }
+    </Link>
+    );
 }
