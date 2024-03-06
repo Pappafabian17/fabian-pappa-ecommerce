@@ -4,7 +4,7 @@ import "./itemDetail.css";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
-function ItemDetail({ name, id, img, category, description, price, stock }) {
+function ItemDetail({ name, id, image, category, description, price, stock }) {
   const [cantidadAgregada, setCantidadAgregada] = useState(0);
 
   const { addItem } = useContext(CartContext);
@@ -25,7 +25,7 @@ function ItemDetail({ name, id, img, category, description, price, stock }) {
         <h2>{name}</h2>
       </header>
       <picture>
-        <img className="imagenDetail" src={img} alt={name} />
+        <img className="imagenDetail" src={image} alt={name} />
       </picture>
       <section>
         <p className="Info">

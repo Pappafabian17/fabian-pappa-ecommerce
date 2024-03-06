@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { getProductById } from "../../utils/getProducts";
+import { getDoc, doc } from "firebase/firestore";
+import { db } from "../../services/firebase/firebaseConfig";
 import ItemDetail from "../itemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 
@@ -11,16 +12,22 @@ function ItemDetailContainer() {
 
   useEffect(() => {
     setLoading(true);
-    getProductById(itemId)
-      .then((response) => setProduct(response))
+
+    const docRef = doc(db, "Items", itemId);
+
+    getDoc(docRef)
+      .then((res) => {
+        const data = res.data();
+        const productAdapted = { id: res.id, ...data };
+        setProduct(productAdapted);
+      })
       .catch((err) => {
         console.error(err);
-        setProduct(null);
       })
       .finally(() => {
         setLoading(false);
       });
-  }, [itemId, product]);
+  }, [itemId]);
 
   return (
     <div className="mainItemDetailContainer">
