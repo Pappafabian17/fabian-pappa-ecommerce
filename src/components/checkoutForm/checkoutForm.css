@@ -1,0 +1,42 @@
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 500px;
+  flex-direction: column;
+}
+.labelContainer {
+  display: flex;
+  flex-direction: column;
+}
+.crearOrdenButton {
+  background: green;
+  color: white;
+  padding: 30px;
+  width: 10vw;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+    color: green;
+    border: solid 3px green;
+  }
+}
+
+.label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Estilos para el campo de entrada */
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}

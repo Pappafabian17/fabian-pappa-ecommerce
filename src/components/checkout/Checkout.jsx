@@ -24,9 +24,6 @@ export default function Checkout() {
   const createOrder = async ({ name, phone, email }) => {
     setLoading(true);
 
-    console.log("cart", cart);
-    console.log("totalArticulos", totalArticulos);
-
     try {
       const objectOrder = {
         buyer: {
@@ -46,46 +43,34 @@ export default function Checkout() {
 
       const productsRef = collection(db, "Items");
 
-      console.log("PRODUCT>>>>>>>>>>>>>>", productsRef);
-
       const productsAddedFromFirestore = await getDocs(
         query(productsRef, where(documentId(), "in", ids))
       );
 
-      console.log("productsAddedFromFirestore", productsAddedFromFirestore);
       const { docs } = productsAddedFromFirestore;
-      console.log("DOCS", docs);
       docs.forEach((doc) => {
-        console.log("entre en forEach");
         const dataDoc = doc.data();
         const stockDb = dataDoc.stock;
 
         const productsAddedToCart = cart.find((prod) => prod.id === doc.id);
-        console.log("productsAddedToCart", productsAddedToCart);
         const prodQuantity = productsAddedToCart?.quantity;
 
         if (stockDb >= prodQuantity) {
           batch.update(doc.ref, { stock: stockDb - prodQuantity });
-          console.log("entre en stockDB >= prod Quantity ");
         } else {
-          console.log("entre en else stockDB >= prod Quantity ");
           outOfStock.push({ id: doc.id, ...dataDoc });
         }
       });
 
       if (outOfStock.length === 0) {
-        console.log("entre en out of stock === 0 ");
         await batch.commit();
 
         const orderRef = collection(db, "Orders");
         const orderAdded = await addDoc(orderRef, objectOrder);
 
-        console.log("ORDER ADDEDDD!", orderAdded.id);
         setOrderId(orderAdded.id);
-        console.log("ORDER IDDDDD!", orderId);
         clearCart();
       } else {
-        console.error("Hay productos fuera de stock");
       }
     } catch (err) {
       console.log(err);

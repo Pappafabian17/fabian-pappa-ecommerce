@@ -20,35 +20,38 @@ export default function CheckoutForm({ onConfirm }) {
   return (
     <div>
       <form onSubmit={handleConfirm} className="form">
-        <label>
-          Nombre
+        <div className="labelContainer">
+          <label className="label">Nombre</label>
           <input
+            className="input"
             type="text"
             value={name}
             onChange={({ target }) => setName(target.value)}
           />
-        </label>
-
-        <label>
-          Telefono
+        </div>
+        <div className="labelContainer">
+          <label className="label">Telefono</label>
           <input
+            className="input"
             type="text"
             value={phone}
             onChange={({ target }) => setPhone(target.value)}
           />
-        </label>
-
-        <label>
-          Email
+        </div>
+        <div className="labelContainer">
+          <label className="label">Email</label>
           <input
+            className="input"
             type="email"
             value={email}
             onChange={({ target }) => setEmail(target.value)}
           />
-        </label>
+        </div>
 
         <div>
-          <button type="submit">Crear Orden</button>
+          <button className="crearOrdenButton" type="submit">
+            Crear Orden
+          </button>
         </div>
       </form>
     </div>

@@ -9,16 +9,19 @@ export default function CartProvider({ children }) {
   const [totalArticulos, setTotalArticulos] = useState(0);
   const [precioTotal, setPrecioTotal] = useState(0);
 
-
-  console.log(cart);
-
-  useEffect(()=>{
-    const cantidadArticulos = cart.reduce((total, item)=>total + item.quantity,0);
-    const totalPagar = cart.reduce((total, item)=> total + item.price * item.quantity,0);
+  useEffect(() => {
+    const cantidadArticulos = cart.reduce(
+      (total, item) => total + item.quantity,
+      0
+    );
+    const totalPagar = cart.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
 
     setTotalArticulos(cantidadArticulos);
-    setPrecioTotal(totalPagar)
-  },[cart])
+    setPrecioTotal(totalPagar);
+  }, [cart]);
 
   const addItem = (item, quantity) => {
     if (!isInCart(item.id)) {
@@ -42,7 +45,16 @@ export default function CartProvider({ children }) {
   };
 
   return (
-    <CartContext.Provider value={{ cart, addItem, removeItem, clearCart, totalArticulos, precioTotal }}>
+    <CartContext.Provider
+      value={{
+        cart,
+        addItem,
+        removeItem,
+        clearCart,
+        totalArticulos,
+        precioTotal,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );

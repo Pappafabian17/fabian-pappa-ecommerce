@@ -5,6 +5,7 @@ import "../index.css";
 
 import { getDocs, collection, query, where } from "firebase/firestore";
 import { db } from "../services/firebase/firebaseConfig";
+import Spinner from "../components/generics/Spinner";
 
 export default function ItemListContainer({ greeting }) {
   const [productos, setProductos] = useState([]);
@@ -37,7 +38,7 @@ export default function ItemListContainer({ greeting }) {
   return (
     <div className="ItemListContainer">
       <p>{greeting}</p>
-      {loading ? "cargando " : <ItemList productos={productos} />}
+      {loading ? <Spinner /> : <ItemList productos={productos} />}
     </div>
   );
 }

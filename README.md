@@ -1,3 +1,5 @@
+<!-- Hola Soy Fabian Pappa, en este proyecto me enfoque en poder desarrollar un e-commerce de lo que mas me gusta, los mates. Soy un apasionado de los mates y fui desarrollando a lo largo de la cursada este e-commerce, las categorias elegidas son Mates, termos y bombillas, planeo en un futuro mejorarlo y expandirlo a mas articulos relacionados con los mates. No use paquetes por fuera de los visto en clases, pero si utilice un componente <spinner> para cuando se hace la carga de alguna parte.   -->
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

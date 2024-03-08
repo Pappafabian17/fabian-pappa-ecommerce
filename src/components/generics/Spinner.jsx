@@ -1,12 +1,15 @@
 import "./spinner.css";
 export default function Spinner() {
   return (
-    <>
+    <div>
       <svg
-        style="left: 50%;
-        top: 50%;
-        position: absolute;
-        transform: translate(-50%, -50%) matrix(1, 0, 0, 1, 0, 0);"
+        style={{
+          left: "50%",
+          top: "50%",
+          position: "absolute",
+          transform: "translate(-50%, -50%) matrix(1, 0, 0, 1, 0, 0)",
+          color: "green",
+        }}
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 187.3 93.7"
         height="300px"
@@ -34,6 +37,6 @@ export default function Spinner() {
           id="outline-bg"
         ></path>
       </svg>
-    </>
+    </div>
   );
 }
