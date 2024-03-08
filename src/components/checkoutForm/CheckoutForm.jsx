@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import "./checkoutForm.css";
+
 export default function CheckoutForm({ onConfirm }) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -17,7 +19,7 @@ export default function CheckoutForm({ onConfirm }) {
   };
   return (
     <div>
-      <form onSubmit={handleConfirm}>
+      <form onSubmit={handleConfirm} className="form">
         <label>
           Nombre
           <input

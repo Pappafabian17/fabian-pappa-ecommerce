@@ -1,0 +1,17 @@
+.itemCartContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 1rem;
+  border: 2px solid green;
+  padding: 30px;
+  margin: 20px;
+  min-width: -webkit-fill-available;
+  border-radius: 12px;
+  background-color: rgb(178, 226, 178);
+
+  p {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+}

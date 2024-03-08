@@ -1,0 +1,57 @@
+.cartContainerNoContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.goToProductButton {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: green;
+  border: solid 3px green;
+  padding: 15px;
+  border-radius: 12px;
+  &:hover {
+    background-color: green;
+    color: white;
+  }
+}
+
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.totalPrice {
+  font-size: 23px;
+}
+.cleanCartButton {
+  background-color: brown;
+  border: solid 2px black;
+  color: white;
+  padding: 20px;
+  font-size: 17px;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  &:hover {
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+  }
+}
+.checkoutButton {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: black;
+  font-weight: 700;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  border: solid 2px green;
+  padding: 20px;
+  &:hover {
+    background-color: rgb(2, 68, 2);
+    color: white;
+  }
+}
